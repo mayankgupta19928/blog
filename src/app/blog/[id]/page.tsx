@@ -19,8 +19,7 @@ interface blogDetail {
     const res = await fetch(`https://dummyapi.online/api/blogposts/${id}`);
     const result = await res.json();
     // let userInfo = 
-    // console.log('result',result)
-
+ 
     // useEffect(() => {
     //     const fetchData = async () => {
     //         try {

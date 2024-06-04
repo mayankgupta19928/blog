@@ -7,11 +7,9 @@ const BlogPost = (props:any) => {
 
   const [isReadMore, setIsReadMore] = useState(false);
   const router = useRouter()
-
-  // Function to handle click event and navigate to detail page
-  const handleClick = (blogId: any) => {
-    // Navigate to the detail page using React Router
-    router.push(`/blog/${blogId}`); // Replace '/detail' with your actual detail page route
+ 
+   const handleClick = (blogId: any) => {
+     router.push(`/blog/${blogId}`); // Replace '/detail' with your actual detail page route
   };
 
   const toggleReadMore = () => {
@@ -21,8 +19,8 @@ const BlogPost = (props:any) => {
   return (
     <>
     
-    {props?.blogData?.map((blog:any)=>{
-      let blogId = blog?.id;
+    {props?.blogData?.result?.map((blog:any)=>{
+      let blogId = blog?._id;
       return(
          <article key={blog?.id} className={styles.blogPost}>
         <h2>{blog?.title}</h2>
